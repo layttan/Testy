@@ -16,6 +16,7 @@ pipeline {
                 echo "DISABLE_AUTH is ${DISABLE_AUTH}"
                 sh 'printenv'
                 sh 'ls -ltr'
+                sh 'cat my.properties'
             }
         }
 
