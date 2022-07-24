@@ -14,11 +14,11 @@ pipeline {
             steps {
                 echo "Database engine is ${DB_ENGINE}"
                 echo "DISABLE_AUTH is ${DISABLE_AUTH}"
-                sh 'printenv'
+//                 sh 'printenv'
+                sh 'chmod +x build.sh'
                 sh 'ls -ltr'
                 sh 'cat my.properties'
                 //sh 'eval "echo \"$(<template.properties\"" > updated.properties'
-                sh 'chmod +x build.sh'
                 sh './build.sh'
                 sh 'cat updated.properties'
             }
