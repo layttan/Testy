@@ -4,6 +4,13 @@ node {
     // Get Artifactory server instance, defined in the Artifactory Plugin administration page.
     def server = Artifactory.server "SERVER_ID"
 
+    configFileProvider([configFile(fileId: "$MY_CONFIG", variable: 'skip_tests')]) {
+      echo skip_tests
+      assert skip_tests == 'true'
+
+      echo "$skip_tests"
+      assert "$skip_tests" == 'true'
+    }
     stage "Create build output"
 
         // Make the output directory.
