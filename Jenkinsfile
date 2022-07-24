@@ -17,7 +17,7 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Deploy') {
             steps {
                 echo "Database engine is ${DB_ENGINE}"
                 echo "DISABLE_AUTH is ${DISABLE_AUTH}"
