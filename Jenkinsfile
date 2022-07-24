@@ -17,6 +17,8 @@ pipeline {
                 sh 'printenv'
                 sh 'ls -ltr'
                 sh 'cat my.properties'
+                eval "echo \"$(<template.properties\"" > updated.properties
+                sh 'cat updated.properties'
             }
         }
 
