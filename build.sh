@@ -1,0 +1,1 @@
+eval "echo \"$(<template.properties\"" > updated.properties
