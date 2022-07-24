@@ -1,1 +1,1 @@
-eval "echo \"$(<template.properties\"" > updated.properties
+eval "echo \"$(<template.properties)\"" > updated.properties
