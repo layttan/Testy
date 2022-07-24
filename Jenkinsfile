@@ -21,6 +21,7 @@ pipeline {
                 //sh 'eval "echo \"$(<template.properties\"" > updated.properties'
                 sh 'cat build.sh'
                 sh './build.sh'
+                sh 'ls -ltr'
                 sh 'cat updated.properties'
             }
         }
