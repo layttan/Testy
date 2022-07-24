@@ -9,18 +9,13 @@ pipeline {
     }
 
     stages {
-        stage('Clone') {
-            steps {
-                git branch: 'main'
-                url: 'https://github.com/layttan/Testy.git'
-            }
-        }
 
         stage('Build') {
             steps {
                 echo "Database engine is ${DB_ENGINE}"
                 echo "DISABLE_AUTH is ${DISABLE_AUTH}"
                 sh 'printenv'
+                sh 'ls -ltr'
             }
         }
 
