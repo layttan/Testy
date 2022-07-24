@@ -17,6 +17,14 @@ pipeline {
             }
         }
 
+        stage("Read properies")
+            {
+                def props = readProperties  file: './my.properties'
+                for (def key in props.keySet())
+                {
+                    println "key = ${key}, value = ${props[key]}"
+                }
+            }
         stage('Deploy') {
             steps {
                 echo "Database engine is ${DB_ENGINE}"
